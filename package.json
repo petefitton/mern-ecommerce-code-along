@@ -1,0 +1,24 @@
+{
+  "name": "mern-ecommerce-code-along",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.10.1",
+    "mongoose": "^8.16.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
