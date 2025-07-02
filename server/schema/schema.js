@@ -1,5 +1,5 @@
 // const { projects, clients } = require('../sampleData.js')
-
+const mongoose = require('mongoose');
 const Project = require('../models/Project.js');
 const Client = require('../models/Client.js');
 
@@ -91,7 +91,9 @@ const mutation = new GraphQLObjectType({
       args: {
         id: { type: GraphQLNonNull(GraphQLID) },
       },
-      resolve(parent, args) {
+      async resolve(parent, args) {
+        await Project.deleteMany({ clientId: args.id });
+
         return Client.findByIdAndDelete(args.id);
       }
     },
